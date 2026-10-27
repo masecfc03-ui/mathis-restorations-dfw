@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Work &mdash; Mathis Restorations &mdash; Frisco, TX</title><meta name="robots" content="noindex, nofollow">  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%237c2d12'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='18' font-weight='bold' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&amp;family=Outfit:wght@400;600&display=swap">
+  <style>:root { --accent: #7c2d12; --font-display: 'Big Shoulders Display', sans-serif; --font-body: 'Outfit', system-ui, sans-serif; }</style>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  /* Lightbox */
+  .lightbox-overlay {
+    position: fixed; inset: 0; z-index: 800;
+    background: rgba(11,29,40,0.95);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none;
+    transition: opacity 200ms;
+    padding: 1.5rem;
+  }
+  .lightbox-overlay.is-open { opacity: 1; pointer-events: all; }
+  .lightbox-img {
+    max-width: 100%; max-height: 80vh;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  }
+  .lightbox-caption {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.9375rem;
+    margin-top: 1rem;
+    text-align: center;
+    max-width: 600px;
+  }
+  .lightbox-close {
+    position: fixed; top: 1.25rem; right: 1.25rem;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.20);
+    border-radius: 50%;
+    width: 44px; height: 44px;
+    color: #fff; font-size: 1.5rem;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: background 150ms;
+  }
+  .lightbox-close:hover { background: rgba(255,255,255,0.20); }
+  .gallery-item { cursor: zoom-in; }
+  </style>
+</head>
+<body><div class="preview-banner" role="alert">Preview site &mdash; not live or indexed</div><header class="site-header" id="top">
+  <div class="header-inner">
+    <div class="header-brand">      <a class="header-logo" href="index.html" aria-label="Mathis Restorations home">
+        <img src="logo.svg" alt="Mathis Restorations" height="44" width="210">
+      </a>    </div>
+    <div class="header-actions">
+      <a class="btn-call" href="tel:9728347204">(972) 834-7204</a>
+      <a class="btn-quote" href="contact.html">Free Quote</a>
+    </div>
+  </div>
+</header><nav class="site-nav" id="site-nav" aria-label="Site navigation">
+  <div class="nav-inner">
+    <a href="index.html">Home</a>
+    <div class="nav-dropdown">
+      <a href="services.html">Services</a>
+      <ul class="nav-dropdown-menu">        <li><a href="services.html#service-1">Roof Replacement</a></li>        <li><a href="services.html#service-2">Storm Damage Repair</a></li>        <li><a href="services.html#service-3">Leak Detection &amp; Repair</a></li>        <li><a href="services.html#service-4">Gutters &amp; Drainage</a></li>        <li><a href="services.html#service-5">Home Remodeling</a></li>      </ul>
+    </div>
+    <a href="gallery.html" class="nav-active">Our Work</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="index.html#about">About</a>
+    <a href="contact.html">Contact</a>
+    <!-- Hamburger button — mobile only -->
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile full-screen menu -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-header">
+    <span class="mobile-menu-brand">Mathis Restorations</span>
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">&times;</button>
+  </div>
+  <nav class="mobile-menu-nav">
+    <a href="index.html">Home</a>
+    <details>
+      <summary>Services</summary>
+      <div class="mobile-submenu">        <a href="services.html#service-1">Roof Replacement</a>        <a href="services.html#service-2">Storm Damage Repair</a>        <a href="services.html#service-3">Leak Detection &amp; Repair</a>        <a href="services.html#service-4">Gutters &amp; Drainage</a>        <a href="services.html#service-5">Home Remodeling</a>      </div>
+    </details>
+    <a href="gallery.html">Our Work</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="index.html#about">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>  <div class="mobile-menu-ctas">
+    <a href="contact.html" class="mobile-cta-book">Book Now</a>
+    <a href="tel:9728347204" class="mobile-cta-phone">(972) 834-7204</a>
+  </div>
+</div>
+<div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+<script>
+(function(){
+  var btn=document.getElementById('nav-hamburger');
+  var menu=document.getElementById('mobile-menu');
+  var overlay=document.getElementById('mobile-menu-overlay');
+  var close=document.getElementById('mobile-menu-close');
+  function open(){menu.classList.add('is-open');overlay.classList.add('is-open');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+  function shut(){menu.classList.remove('is-open');overlay.classList.remove('is-open');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+  btn.addEventListener('click',open);
+  close.addEventListener('click',shut);
+  overlay.addEventListener('click',shut);
+})();
+</script>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="index.html">Home</a><span>/</span><span>Our Work</span>
+    </nav>
+    <p class="page-hero-eyebrow">Portfolio</p>
+    <h1 class="page-hero-title">Our Work in Frisco &amp; Surrounding Areas</h1>
+    <p class="page-hero-sub">Real jobs, real results. Every project completed by Mathis Restorations &mdash; licensed and insured.</p>
+  </div>
+</div>
+
+<main>
+  <section class="section">
+    <div class="section-inner">      <div class="gallery-grid reveal">        <button class="gallery-item"
+                onclick="openLightbox('job2.jpg', 'New architectural shingles installed on a DFW home')"
+                aria-label="View: New architectural shingles installed on a DFW home">
+          <img src="job2.jpg" alt="New architectural shingles installed on a DFW home" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-label">New architectural shingles installed on a DFW home</span>
+          </div>
+        </button>        <button class="gallery-item"
+                onclick="openLightbox('job3.jpg', 'Storm damage repair — hail damage assessment and repair')"
+                aria-label="View: Storm damage repair — hail damage assessment and repair">
+          <img src="job3.jpg" alt="Storm damage repair — hail damage assessment and repair" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-label">Storm damage repair — hail damage assessment and repair</span>
+          </div>
+        </button>        <button class="gallery-item"
+                onclick="openLightbox('job4.jpg', 'Gutter installation and drainage work')"
+                aria-label="View: Gutter installation and drainage work">
+          <img src="job4.jpg" alt="Gutter installation and drainage work" loading="lazy">
+          <div class="gallery-item-overlay">
+            <span class="gallery-item-label">Gutter installation and drainage work</span>
+          </div>
+        </button>      </div>
+    </div>
+  </section>
+
+  <div class="cta-band reveal">
+    <div class="cta-band-inner">
+      <h2 class="cta-band-headline">Want Work Like This?</h2>
+      <p class="cta-band-sub">Get a free estimate. We&rsquo;ll come out, look at the job, and give you a straight price.</p>
+      <div class="cta-band-btns">
+        <a href="contact.html" class="btn btn-secondary">Get a Price</a>
+        <a href="tel:9728347204" class="btn btn-ghost">(972) 834-7204</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Lightbox overlay -->
+<div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer"
+     onclick="if(event.target===this)closeLightbox()">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <p class="lightbox-caption" id="lightbox-caption"></p>
+</div>
+
+<footer class="site-footer" id="footer">
+  <div class="footer-grid">
+    <div>
+      <p class="footer-name">Mathis Restorations</p>
+      <address class="footer-address">4200 Legacy Dr, Frisco, TX 75034</address>
+      <a class="footer-phone-link" href="tel:9728347204">(972) 834-7204</a>    </div>
+    <div>      <p class="footer-hours-label">Hours</p>
+      <ul class="footer-hours-list">        <li>
+          <strong>Mon</strong>
+7am–6pm        </li>        <li>
+          <strong>Tue</strong>
+7am–6pm        </li>        <li>
+          <strong>Wed</strong>
+7am–6pm        </li>        <li>
+          <strong>Thu</strong>
+7am–6pm        </li>        <li>
+          <strong>Fri</strong>
+7am–6pm        </li>        <li>
+          <strong>Sat</strong>
+8am–2pm        </li>        <li>
+          <strong>Sun</strong>
+<span class="closed">Closed</span>        </li>      </ul>    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Mathis Restorations</span>    <span>Photos and reviews via Google</span>    <span class="footer-preview-note">Preview only &mdash; not indexed</span>  </div>
+</footer><div class="sticky-mobile-ctas" aria-label="Quick contact">
+  <a href="contact.html" class="sticky-book">Book Now</a>
+  <a href="tel:9728347204" class="sticky-phone">(972) 834-7204</a>
+</div><script>
+(function(){
+  // ── Header shrink after 80px ──────────────────────────────
+  var nav=document.getElementById('site-nav');
+  function onScroll(){
+    if(nav){
+      if(window.scrollY>80){nav.classList.add('scrolled');}
+      else{nav.classList.remove('scrolled');}
+    }
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+
+  // ── Scroll reveal (fade up 16px, 400ms) ──────────────────
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    },{threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  }else{
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('is-visible');});
+  }
+
+  // ── Today row highlight in hours tables ──────────────────
+  var t=new Date().getDay();
+  var rows=document.querySelectorAll('tr[data-jsday]');
+  for(var i=0;i<rows.length;i++){
+    if(parseInt(rows[i].getAttribute('data-jsday'),10)===t){
+      rows[i].classList.add('today-row');break;
+    }
+  }
+
+  // ── Hamburger menu ────────────────────────────────────────
+  var btn=document.getElementById('nav-hamburger');
+  var menu=document.getElementById('mobile-menu');
+  var closeBtn=document.getElementById('mobile-menu-close');
+  function openMenu(){
+    if(!menu)return;
+    menu.classList.add('is-open');
+    btn&&btn.setAttribute('aria-expanded','true');
+    document.body.style.overflow='hidden';
+  }
+  function closeMenu(){
+    if(!menu)return;
+    menu.classList.remove('is-open');
+    btn&&btn.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
+  btn&&btn.addEventListener('click',openMenu);
+  closeBtn&&closeBtn.addEventListener('click',closeMenu);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+  // Close on nav link tap
+  menu&&menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu);});
+
+  // ── Reviews carousel dots ─────────────────────────────────
+  var carousel=document.querySelector('.reviews-carousel');
+  var dotsWrap=document.querySelector('.reviews-dots');
+  if(carousel&&dotsWrap){
+    var cards=carousel.querySelectorAll('.review-card');
+    var dots=dotsWrap.querySelectorAll('.reviews-dot');
+    function updateDots(){
+      var idx=Math.round(carousel.scrollLeft/(carousel.scrollWidth/cards.length));
+      dots.forEach(function(d,i){d.classList.toggle('active',i===idx);});
+    }
+    carousel.addEventListener('scroll',updateDots,{passive:true});
+    dots.forEach(function(d,i){
+      d.addEventListener('click',function(){
+        carousel.scrollTo({left:i*(carousel.scrollWidth/cards.length),behavior:'smooth'});
+      });
+    });
+    if(dots.length)dots[0].classList.add('active');
+  }
+})();
+</script><script>
+function openLightbox(src, caption) {
+  var lb = document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox-img').alt = caption;
+  document.getElementById('lightbox-caption').textContent = caption;
+  lb.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('is-open');
+  document.body.style.overflow = '';
+}
+document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+</script>
+</body>
+</html>

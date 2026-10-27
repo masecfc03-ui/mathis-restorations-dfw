@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services &mdash; Mathis Restorations &mdash; Frisco, TX</title><meta name="robots" content="noindex, nofollow">  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%237c2d12'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='18' font-weight='bold' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&amp;family=Outfit:wght@400;600&display=swap">
+  <style>:root { --accent: #7c2d12; --font-display: 'Big Shoulders Display', sans-serif; --font-body: 'Outfit', system-ui, sans-serif; }</style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body><div class="preview-banner" role="alert">Preview site &mdash; not live or indexed</div><header class="site-header" id="top">
+  <div class="header-inner">
+    <div class="header-brand">      <a class="header-logo" href="index.html" aria-label="Mathis Restorations home">
+        <img src="logo.svg" alt="Mathis Restorations" height="44" width="210">
+      </a>    </div>
+    <div class="header-actions">
+      <a class="btn-call" href="tel:9728347204">(972) 834-7204</a>
+      <a class="btn-quote" href="contact.html">Free Quote</a>
+    </div>
+  </div>
+</header><nav class="site-nav" id="site-nav" aria-label="Site navigation">
+  <div class="nav-inner">
+    <a href="index.html">Home</a>
+    <div class="nav-dropdown">
+      <a href="services.html" class="nav-active">Services</a>
+      <ul class="nav-dropdown-menu">        <li><a href="services.html#service-1">Roof Replacement</a></li>        <li><a href="services.html#service-2">Storm Damage Repair</a></li>        <li><a href="services.html#service-3">Leak Detection &amp; Repair</a></li>        <li><a href="services.html#service-4">Gutters &amp; Drainage</a></li>        <li><a href="services.html#service-5">Home Remodeling</a></li>      </ul>
+    </div>
+    <a href="gallery.html">Our Work</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="index.html#about">About</a>
+    <a href="contact.html">Contact</a>
+    <!-- Hamburger button — mobile only -->
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile full-screen menu -->
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-header">
+    <span class="mobile-menu-brand">Mathis Restorations</span>
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">&times;</button>
+  </div>
+  <nav class="mobile-menu-nav">
+    <a href="index.html">Home</a>
+    <details>
+      <summary>Services</summary>
+      <div class="mobile-submenu">        <a href="services.html#service-1">Roof Replacement</a>        <a href="services.html#service-2">Storm Damage Repair</a>        <a href="services.html#service-3">Leak Detection &amp; Repair</a>        <a href="services.html#service-4">Gutters &amp; Drainage</a>        <a href="services.html#service-5">Home Remodeling</a>      </div>
+    </details>
+    <a href="gallery.html">Our Work</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="index.html#about">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>  <div class="mobile-menu-ctas">
+    <a href="contact.html" class="mobile-cta-book">Book Now</a>
+    <a href="tel:9728347204" class="mobile-cta-phone">(972) 834-7204</a>
+  </div>
+</div>
+<div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+<script>
+(function(){
+  var btn=document.getElementById('nav-hamburger');
+  var menu=document.getElementById('mobile-menu');
+  var overlay=document.getElementById('mobile-menu-overlay');
+  var close=document.getElementById('mobile-menu-close');
+  function open(){menu.classList.add('is-open');overlay.classList.add('is-open');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+  function shut(){menu.classList.remove('is-open');overlay.classList.remove('is-open');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+  btn.addEventListener('click',open);
+  close.addEventListener('click',shut);
+  overlay.addEventListener('click',shut);
+})();
+</script>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="index.html">Home</a><span>/</span><span>Services</span>
+    </nav>
+    <p class="page-hero-eyebrow">What We Do</p>
+    <h1 class="page-hero-title">Services Offered by Mathis Restorations</h1>
+    <p class="page-hero-sub">Licensed, insured, and serving Frisco and surrounding areas. Call us for a free estimate on any job below.</p>
+  </div>
+</div>
+
+<main>
+  <section class="section section--surface">
+    <div class="section-inner">
+      <div class="services-grid reveal">        <a class="service-card" href="services/roof-replacement.html" id="service-1">
+          <span class="service-card-icon"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  <circle cx="24" cy="24" r="24" fill="currentColor" opacity="0.1"/>
+  <path d="M8 26L24 12l16 14" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="14" y="26" width="20" height="12" rx="1" stroke="currentColor" stroke-width="2" fill="none"/>
+  <rect x="20" y="30" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+</svg></span>
+          <span class="service-card-name">Roof Replacement</span>          <span class="service-card-price">$8,000 – $18,000</span><span class="service-card-desc">Full tear-off and replacement with premium shingles. We work with all major insurance carriers and handle the &hellip;</span>          <span class="service-card-link">Details &amp; pricing &rarr;</span>
+          <span class="service-card-watermark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  <circle cx="24" cy="24" r="24" fill="currentColor" opacity="0.1"/>
+  <path d="M8 26L24 12l16 14" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="14" y="26" width="20" height="12" rx="1" stroke="currentColor" stroke-width="2" fill="none"/>
+  <rect x="20" y="30" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+</svg></span>
+        </a>        <a class="service-card" href="services/storm-damage-repair.html" id="service-2">
+          <span class="service-card-icon"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  <circle cx="24" cy="24" r="24" fill="currentColor" opacity="0.1"/>
+  <path d="M15 33l4-4m10-10l4-4m-18 4l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M31 15c2 2 2 5 0 7l-2 2-7-7 2-2c2-2 5-2 7 0z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
+  <path d="M15 31l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg></span>
+          <span class="service-card-name">Storm Damage Repair</span>          <span class="service-card-price">Typically covered by insurance</span><span class="service-card-desc">Hail and wind damage addressed quickly before it becomes a bigger problem. We inspect, document everything for&hellip;</span>          <span class="service-card-link">Details &amp; pricing &rarr;</span>
+          <span class="service-card-watermark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  <circle cx="24" cy="24" r="24" fill="currentColor" opacity="0.1"/>
+  <path d="M15 33l4-4m10-10l4-4m-18 4l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M31 15c2 2 2 5 0 7l-2 2-7-7 2-2c2-2 5-2 7 0z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
+  <path d="M15 31l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg></span>
+        </a>        <a class="service-card" href="services/leak-detection-&amp;-repair.html" id="service-3">
+          <span class="service-card-icon"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  <circle cx="24" cy="24" r="24" fill="currentColor" opacity="0.1"/>
+  <path d="M24 10c0 0-8 8-8 14a8 8 0 0016 0c0-6-8-14-8-14z" stroke="currentColor" stroke-width="2" fill="none"/>
+  <path d="M20 28a4 4 0 004 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M15 38c2-1 4-2 9-2s7 1 9 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg></span>
+          <span class="service-card-name">Leak Detection &amp; Repair</span>          <span class="service-card-price">$400 – $2,500</span><span class="service-card-desc">Persistent leaks can destroy ceilings, insulation, and framing. We find the source — whether it&#39;s flashing, pi&hellip;</span>          <span class="service-card-link">Details &amp; pricing &rarr;</span>
+          <span class="service-card-watermark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  <circle cx="24" cy="24" r="24" fill="currentColor" opacity="0.1"/>
+  <path d="M24 10c0 0-8 8-8 14a8 8 0 0016 0c0-6-8-14-8-14z" stroke="currentColor" stroke-width="2" fill="none"/>
+  <path d="M20 28a4 4 0 004 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M15 38c2-1 4-2 9-2s7 1 9 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg></span>
+        </a>        <a class="service-card" href="services/gutters-&amp;-drainage.html" id="service-4">
+          <span class="service-card-icon"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  <circle cx="24" cy="24" r="24" fill="currentColor" opacity="0.1"/>
+  <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2"/>
+  <circle cx="24" cy="24" r="3" fill="currentColor"/>
+  <line x1="24" y1="14" x2="24" y2="11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <line x1="24" y1="34" x2="24" y2="37" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <line x1="14" y1="24" x2="11" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <line x1="34" y1="24" x2="37" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <line x1="17" y1="17" x2="15" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <line x1="31" y1="17" x2="33" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <line x1="17" y1="31" x2="15" y2="33" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <line x1="31" y1="31" x2="33" y2="33" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg></span>
+          <span class="service-card-name">Gutters &amp; Drainage</span>          <span class="service-card-price">$1,200 – $3,500</span><span class="service-card-desc">Seamless gutter installation, replacement, and guards. Properly functioning gutters protect your foundation an&hellip;</span>          <span class="service-card-link">Details &amp; pricing &rarr;</span>
+          <span class="service-card-watermark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  <circle cx="24" cy="24" r="24" fill="currentColor" opacity="0.1"/>
+  <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2"/>
+  <circle cx="24" cy="24" r="3" fill="currentColor"/>
+  <line x1="24" y1="14" x2="24" y2="11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <line x1="24" y1="34" x2="24" y2="37" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <line x1="14" y1="24" x2="11" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <line x1="34" y1="24" x2="37" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <line x1="17" y1="17" x2="15" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <line x1="31" y1="17" x2="33" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <line x1="17" y1="31" x2="15" y2="33" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <line x1="31" y1="31" x2="33" y2="33" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg></span>
+        </a>        <a class="service-card" href="services/home-remodeling.html" id="service-5">
+          <span class="service-card-icon"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  <circle cx="24" cy="24" r="24" fill="currentColor" opacity="0.1"/>
+  <path d="M32 18a6 6 0 00-10-4l-4 4a6 6 0 008 8l1-1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M16 30a6 6 0 0010 4l4-4a6 6 0 00-8-8l-1 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg></span>
+          <span class="service-card-name">Home Remodeling</span>          <span class="service-card-price">$15,000 – $80,000</span><span class="service-card-desc">Kitchen and bath remodels, interior restoration work following water damage, and full home renovations. The sa&hellip;</span>          <span class="service-card-link">Details &amp; pricing &rarr;</span>
+          <span class="service-card-watermark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+  <circle cx="24" cy="24" r="24" fill="currentColor" opacity="0.1"/>
+  <path d="M32 18a6 6 0 00-10-4l-4 4a6 6 0 008 8l1-1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  <path d="M16 30a6 6 0 0010 4l4-4a6 6 0 00-8-8l-1 1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+</svg></span>
+        </a>      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="section-inner" style="max-width:720px">
+      <span class="section-label">Common Questions</span>
+      <h2 class="section-heading section-heading-underline">Frequently Asked</h2>
+      <div class="faq-list" style="margin-top:1.5rem">        <div class="faq-item">
+          <details open>
+            <summary>Do you work with insurance companies?</summary>
+            <div class="faq-answer">Yes, we work with all major carriers. We&#39;ll come out, document the damage, and walk you through the claims process. We handle the back-and-forth so you can focus on your family.</div>
+          </details>
+        </div>        <div class="faq-item">
+          <details>
+            <summary>How soon can you get out for an inspection?</summary>
+            <div class="faq-answer">We typically schedule free inspections within 24–48 hours. After a major storm event, call us immediately — we prioritize active damage calls.</div>
+          </details>
+        </div>        <div class="faq-item">
+          <details>
+            <summary>Are you licensed and insured in Texas?</summary>
+            <div class="faq-answer">Yes. We carry full general liability and workers&#39; comp insurance and are licensed for roofing and renovation work throughout Texas. We provide certificates of insurance before any job starts.</div>
+          </details>
+        </div>        <div class="faq-item">
+          <details>
+            <summary>What roofing materials do you recommend?</summary>
+            <div class="faq-answer">For most DFW homes, we recommend Class 4 impact-resistant architectural shingles — they hold up better against hail and often qualify for insurance discounts. We carry GAF, CertainTeed, and Owens Corning lines.</div>
+          </details>
+        </div>      </div>
+    </div>
+  </section>
+  <div class="cta-band reveal">
+    <div class="cta-band-inner">
+      <h2 class="cta-band-headline">Don&rsquo;t See What You Need?</h2>
+      <p class="cta-band-sub">Call and describe the job. If it&rsquo;s in our wheelhouse, we&rsquo;ll give you a straight price on the phone.</p>
+      <div class="cta-band-btns">
+        <a href="contact.html" class="btn btn-secondary">Get Free Quote</a>
+        <a href="tel:9728347204" class="btn btn-ghost">(972) 834-7204</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" id="footer">
+  <div class="footer-grid">
+    <div>
+      <p class="footer-name">Mathis Restorations</p>
+      <address class="footer-address">4200 Legacy Dr, Frisco, TX 75034</address>
+      <a class="footer-phone-link" href="tel:9728347204">(972) 834-7204</a>    </div>
+    <div>      <p class="footer-hours-label">Hours</p>
+      <ul class="footer-hours-list">        <li>
+          <strong>Mon</strong>
+7am–6pm        </li>        <li>
+          <strong>Tue</strong>
+7am–6pm        </li>        <li>
+          <strong>Wed</strong>
+7am–6pm        </li>        <li>
+          <strong>Thu</strong>
+7am–6pm        </li>        <li>
+          <strong>Fri</strong>
+7am–6pm        </li>        <li>
+          <strong>Sat</strong>
+8am–2pm        </li>        <li>
+          <strong>Sun</strong>
+<span class="closed">Closed</span>        </li>      </ul>    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Mathis Restorations</span>    <span>Photos and reviews via Google</span>    <span class="footer-preview-note">Preview only &mdash; not indexed</span>  </div>
+</footer><div class="sticky-mobile-ctas" aria-label="Quick contact">
+  <a href="contact.html" class="sticky-book">Book Now</a>
+  <a href="tel:9728347204" class="sticky-phone">(972) 834-7204</a>
+</div><script>
+(function(){
+  // ── Header shrink after 80px ──────────────────────────────
+  var nav=document.getElementById('site-nav');
+  function onScroll(){
+    if(nav){
+      if(window.scrollY>80){nav.classList.add('scrolled');}
+      else{nav.classList.remove('scrolled');}
+    }
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+
+  // ── Scroll reveal (fade up 16px, 400ms) ──────────────────
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    },{threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  }else{
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('is-visible');});
+  }
+
+  // ── Today row highlight in hours tables ──────────────────
+  var t=new Date().getDay();
+  var rows=document.querySelectorAll('tr[data-jsday]');
+  for(var i=0;i<rows.length;i++){
+    if(parseInt(rows[i].getAttribute('data-jsday'),10)===t){
+      rows[i].classList.add('today-row');break;
+    }
+  }
+
+  // ── Hamburger menu ────────────────────────────────────────
+  var btn=document.getElementById('nav-hamburger');
+  var menu=document.getElementById('mobile-menu');
+  var closeBtn=document.getElementById('mobile-menu-close');
+  function openMenu(){
+    if(!menu)return;
+    menu.classList.add('is-open');
+    btn&&btn.setAttribute('aria-expanded','true');
+    document.body.style.overflow='hidden';
+  }
+  function closeMenu(){
+    if(!menu)return;
+    menu.classList.remove('is-open');
+    btn&&btn.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
+  btn&&btn.addEventListener('click',openMenu);
+  closeBtn&&closeBtn.addEventListener('click',closeMenu);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+  // Close on nav link tap
+  menu&&menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu);});
+
+  // ── Reviews carousel dots ─────────────────────────────────
+  var carousel=document.querySelector('.reviews-carousel');
+  var dotsWrap=document.querySelector('.reviews-dots');
+  if(carousel&&dotsWrap){
+    var cards=carousel.querySelectorAll('.review-card');
+    var dots=dotsWrap.querySelectorAll('.reviews-dot');
+    function updateDots(){
+      var idx=Math.round(carousel.scrollLeft/(carousel.scrollWidth/cards.length));
+      dots.forEach(function(d,i){d.classList.toggle('active',i===idx);});
+    }
+    carousel.addEventListener('scroll',updateDots,{passive:true});
+    dots.forEach(function(d,i){
+      d.addEventListener('click',function(){
+        carousel.scrollTo({left:i*(carousel.scrollWidth/cards.length),behavior:'smooth'});
+      });
+    });
+    if(dots.length)dots[0].classList.add('active');
+  }
+})();
+</script></body>
+</html>
